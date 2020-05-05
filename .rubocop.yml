@@ -1,0 +1,58 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+
+Layout/LineLength:
+  Max: 100
+
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+
+Lint/RaiseException:
+  Enabled: true
+
+Lint/StructNewOverride:
+  Enabled: true
+
+Metrics/AbcSize:
+  Max: 20
+
+Metrics/BlockLength:
+  Max: 30
+  Severity: refactor
+  Exclude:
+    - spec/**/*
+
+Metrics/MethodLength:
+  Max: 30
+  Severity: refactor
+  Exclude:
+    - db/**/*
+
+Rails/RakeEnvironment:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Max: 30
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+Style/Documentation:
+  Exclude:
+    - app/**/*
+    - config/application.rb
+    - db/**/*
+    - spec/**/*
+
+Style/ExponentialNotation:
+  Enabled: true
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true

@@ -1,0 +1,7 @@
+node_modules/**/*
+vendor/**/*
+public/**/*
+coverage/**/*
+babel.config.js
+config/webpack/*.js
+postcss.config.js

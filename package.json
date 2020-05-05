@@ -1,0 +1,22 @@
+{
+  "name": "simple_chat",
+  "private": true,
+  "dependencies": {
+    "@rails/actioncable": "^6.0.0",
+    "@rails/activestorage": "^6.0.0",
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "4.2.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "turbolinks": "^5.2.0"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "webpack-dev-server": "^3.10.3"
+  },
+  "scripts": {
+    "lint": "eslint \"./**/*.{js,es6}\"",
+    "lint:fix": "eslint \"./**/*.{js,es6}\" --fix"
+  }
+}

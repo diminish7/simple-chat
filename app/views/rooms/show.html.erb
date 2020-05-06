@@ -1,0 +1,8 @@
+<h2><%= @room.name %></h2>
+<div>
+  <%= link_to t('.edit'), edit_room_path(@room), class: 'btn btn-sm btn-primary' %>
+  <%= link_to t('.destroy'), room_path(@room), method: :delete, class: 'btn btn-sm btn-danger' %>
+</div>
+<div>
+  TODO: CHAT GOES HERE
+</div>

@@ -1,0 +1,6 @@
+<%= form_for room do |f| %>
+  <%= f.label :name %><br>
+  <%= f.text_field :name, autofocus: true, autocomplete: 'name', class: 'form-control' %>
+
+  <%= f.submit t('submit'), class: 'btn btn-primary form-control mt-3 mb-2' %>
+<% end %>

@@ -30,4 +30,22 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      room:
+        name: Name
+  rooms:
+    index:
+      welcome: Welcome to Simple Chat!
+      new_room: Create a New Room
+      no_rooms: Sorry, there are currently no rooms
+    edit:
+      header: Edit %{room}
+    new:
+      header: New Room
+    show:
+      edit: Edit Room
+      destroy: Destroy Room
+  site:
+    title: Simple Chat!
+  submit: Submit

@@ -1,0 +1,11 @@
+<h2><%= t('.welcome') %></h2>
+<% if @rooms.present? %>
+  <% @rooms.each do |room| %>
+    <div><%= link_to room.name, room %></div>
+  <% end %>
+<% else %>
+  <%= t('.no_rooms') %>
+<% end %>
+<div class="pt-3">
+  <%= link_to t('.new_room'), new_room_path, class: 'btn btn-sm btn-primary' %>
+</div>

@@ -8,7 +8,9 @@ class RoomsController < ApplicationController
     @rooms = Room.all
   end
 
-  def show; end
+  def show
+    @messages = @room.messages.order(created_at: :desc).limit(10).to_a.reverse
+  end
 
   def new; end
 

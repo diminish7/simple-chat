@@ -46,6 +46,11 @@ en:
     show:
       edit: Edit Room
       destroy: Destroy Room
+      modal:
+        body: 'Please enter your name:'
+        error: Name can't be blank
+        go: Go!
+        title: Welcome to %{room}!
   site:
     title: Simple Chat!
   submit: Submit

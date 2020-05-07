@@ -21,6 +21,7 @@ gem 'brakeman', '~> 4.8'
 gem 'material_design_icons', '~> 4.1'
 
 group :development, :test do
+  gem 'action-cable-testing', '= 0.6.1'
   gem 'byebug', platforms: [:mri]
   gem 'erb_lint', '= 0.0.32'
   gem 'factory_bot_rails', '~> 5.1'

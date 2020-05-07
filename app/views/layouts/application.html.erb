@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SimpleChat</title>
+    <title><%= t('site.title') %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -31,5 +31,7 @@
         </div>
       </div>
     </div>
+
+    <%= yield :bottom %>
   </body>
 </html>

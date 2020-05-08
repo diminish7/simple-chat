@@ -1,19 +1,16 @@
 <% content_for :bottom do %>
-  <div id="get-name-modal" class="modal" tabindex="-1" role="dialog">
+  <div id="get-name-modal" class="modal" role="dialog" data-keyboard="false">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title"><%= t('.modal.title', room: @room.name) %></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
         </div>
         <div class="modal-body">
           <div id="no-name-error" class="alert alert-danger" style="display: none;">
             <%= t('.modal.error') %>
           </div>
           <p><%= t('.modal.body') %></p>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" autofocus="autofocus">
         </div>
         <div class="modal-footer">
           <button id="save-name-button" type="button" class="btn btn-primary"><%= t('.modal.go') %></button>
@@ -23,12 +20,12 @@
   </div>
 <% end %>
 
-<h2><%= @room.name %></h2>
-<div>
+<h2 class="text-center"><%= @room.name %></h2>
+<div class="text-center pb-4">
   <%= link_to t('.edit'), edit_room_path(@room), class: 'btn btn-sm btn-primary' %>
   <%= link_to t('.destroy'), room_path(@room), method: :delete, class: 'btn btn-sm btn-danger' %>
 </div>
-<table id="conversation" class="table table-striped" data-id="<%= @room.id %>">
+<table id="conversation" class="table table-striped" data-room="<%= @room.id %>">
   <tbody>
     <% @messages.each do |message| %>
       <tr>
@@ -36,5 +33,21 @@
         <td class="message-content"><%= message.content %></td>
       </tr>
     <% end %>
+    <% if @messages.blank? %>
+      <tr id="no-messages">
+        <td colspan="2" class="text-small text-muted"><%= t('.no_messages') %></td>
+      </tr>
+    <% end %>
   </tbody>
 </table>
+<div id="content-fields" class="pt-2">
+  <div id="no-message-error" class="alert alert-danger" style="display: none;">
+    <%= t('.form.error') %>
+  </div>
+  <textarea class="form-control" placeholder="<%= t('.form.placeholder') %>"></textarea>
+  <div class="mt-2 text-right">
+    <button id="content-button" type="button" class="btn btn-primary">
+      <%= t('.form.submit') %>
+    </button>
+  </div>
+</div>

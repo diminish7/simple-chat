@@ -44,13 +44,17 @@ en:
     new:
       header: New Room
     show:
-      edit: Edit Room
       destroy: Destroy Room
+      edit: Edit Room
+      form:
+        error: Message can't be blank
+        placeholder: Say something to the room!
       modal:
         body: 'Please enter your name:'
         error: Name can't be blank
         go: Go!
         title: Welcome to %{room}!
+      no_messages: There are no messages in this room yet, be the first to say something!
   site:
     title: Simple Chat!
   submit: Submit
